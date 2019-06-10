@@ -31,7 +31,7 @@ output application/xml
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<sap:execute-synchronous-remote-function-call doc:name="Execute BAPI / Function over sRFC" doc:id="a4ea7736-7c13-49c0-be3c-585908d263f7" config-ref="SAP_Outbound" key='#["INBOUND_IDOCS_FOR_TID"]' target="data"/>
+		<sap:execute-synchronous-remote-function-call doc:name="Execute BAPI / Function over sRFC" doc:id="a4ea7736-7c13-49c0-be3c-585908d263f7" config-ref="SAP_Outbound" target="data" key='#["INBOUND_IDOCS_FOR_TID"]'/>
 		<ee:transform doc:name="Transform Message" doc:id="5292a74d-55f9-4367-92d7-4ec1cc0a6a58">
 			<ee:message>
 				<ee:set-payload><![CDATA[%dw 2.0
